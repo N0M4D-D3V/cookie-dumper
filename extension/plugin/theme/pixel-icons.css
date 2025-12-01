@@ -1,0 +1,61 @@
+/* ICONS */
+.pixel-icon {
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-text);
+
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.pixel-icon:hover {
+  transform: scale(1.01);
+  background-color: var(--color-primary);
+}
+
+.bookmark {
+  mask-image: url("/icons/bookmark.svg");
+  -webkit-mask-image: url("/icons/bookmark.svg");
+}
+
+.heart {
+  mask-image: url("/icons/heart.svg");
+  -webkit-mask-image: url("/icons/heart.svg");
+}
+
+.download {
+  mask-image: url("/icons/download.svg");
+  -webkit-mask-image: url("/icons/download.svg");
+}
+
+.backspace {
+  mask-image: url("/icons/backspace.svg");
+  -webkit-mask-image: url("/icons/backspace.svg");
+}
+
+.more-vertical {
+  mask-image: url("/icons/more-vertical.svg");
+  -webkit-mask-image: url("/icons/more-vertical.svg");
+}
+
+.forwardburger {
+  mask-image: url("/icons/forwardburger.svg");
+  -webkit-mask-image: url("/icons/forwardburger.svg");
+}
+
+.backburger {
+  mask-image: url("/icons/backburger.svg");
+  -webkit-mask-image: url("/icons/backburger.svg");
+}
+
+.trash {
+  mask-image: url("/icons/trash.svg");
+  -webkit-mask-image: url("/icons/trash.svg");
+}
+
+.forward {
+  mask-image: url("/icons/forward.svg");
+  -webkit-mask-image: url("/icons/forward.svg");
+}

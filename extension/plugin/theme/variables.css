@@ -1,0 +1,65 @@
+/* ===== Variables por defecto (tema CLARO) ===== */
+:root {
+  --color-primary: rgb(59, 130, 246);
+
+  --color-text: #111827;
+  --bg-body: radial-gradient(circle at top left, #e5e7eb, #ffffff 60%);
+  --bg-panel: rgba(255, 255, 255, 0.75);
+  --panel-border: rgba(148, 163, 184, 0.7);
+  --panel-shadow: 0 8px 18px rgba(15, 23, 42, 0.25);
+
+  --button-bg: transparent;
+  --button-border: rgba(59, 130, 246, 0.6);
+  --button-text: #020617;
+  --button-hover-border: var(--color-primary);
+  --button-hover-color: var(--color-primary);
+
+  --checkbox-bg-off: rgba(241, 245, 249, 0.95);
+  --checkbox-bg-on: var(--color-primary);
+  --checkbox-border: #94a3b8;
+  --checkbox-check: #020617;
+
+  --status-text: #4b5563;
+  --shell-border: 1px solid rgba(59, 130, 246, 0.4);
+  --shell-text-color: #0b1220;
+  --shell-bg: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.07),
+    rgba(16, 185, 129, 0.08)
+  );
+  --shell-caret: rgba(59, 130, 246, 0.9);
+}
+
+/* ===== Overrides para tema OSCURO (según sistema) ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: rgb(0, 255, 200);
+
+    --color-text: #f9fafb;
+    --bg-body: radial-gradient(circle at top left, #1b2330, #050608 60%);
+    --bg-panel: rgba(10, 16, 24, 0.45);
+    --panel-border: rgba(148, 163, 184, 0.3);
+    --panel-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+
+    --button-bg: transparent;
+    --button-border: rgba(0, 255, 200, 0.5);
+    --button-text: #e5e7eb;
+    --button-hover-border: rgba(0, 255, 200, 0.45);
+    --button-hover-color: var(--color-primary);
+
+    --checkbox-bg-off: rgba(5, 10, 18, 0.9);
+    --checkbox-bg-on: #00ffc8;
+    --checkbox-border: #4b5563;
+    --checkbox-check: #021310;
+
+    --status-text: rgba(249, 250, 251, 0.8);
+    --shell-border: 1px solid rgba(0, 255, 200, 0.45);
+    --shell-text-color: #e5e7eb;
+    --shell-bg: linear-gradient(
+      135deg,
+      rgba(0, 255, 200, 0.06),
+      rgba(59, 130, 246, 0.14)
+    );
+    --shell-caret: rgba(0, 255, 200, 0.9);
+  }
+}

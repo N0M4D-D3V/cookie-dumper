@@ -1,0 +1,157 @@
+h1 {
+  margin: 0 0 0 0;
+}
+
+.row {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row.stacked {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+}
+.title-row {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-row h2 {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+/* Views */
+.view {
+  display: none;
+}
+.view.active {
+  display: block;
+}
+.view.hidden {
+  display: none;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.toggle input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--checkbox-border);
+  background: var(--checkbox-bg-off);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.toggle input[type="checkbox"]:checked + .toggle-box {
+  background: var(--checkbox-bg-on);
+  box-shadow: 0 0 8px var(--checkbox-bg-on);
+}
+
+.toggle input[type="checkbox"]:checked + .toggle-box::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 11px;
+  color: var(--checkbox-check);
+}
+
+.toggle-text {
+  user-select: none;
+}
+
+.domain-text:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+#advanced-settings-btn,
+#addDomainBtn,
+#addCurrentBtn {
+  border: none;
+}
+
+status-console {
+  display: block;
+}
+
+#domainsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+#domainsList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  background: var(--bg-panel);
+  box-shadow: var(--panel-shadow);
+  font-size: 12px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+#domainsList li.empty {
+  justify-content: center;
+  font-style: italic;
+  opacity: 0.7;
+  box-shadow: none;
+}
+#domainsList li.empty.enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+#domainsList li.empty.show {
+  opacity: 0.7;
+  transform: translateY(0);
+}
+#domainsList li.enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+#domainsList li.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#domainsList li.removing {
+  opacity: 0;
+  transform: translateY(8px);
+}
+#domainsList .remove-btn {
+  border: none;
+  background: transparent;
+  color: #ef4444;
+  padding: 4px 8px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#domainsList .remove-btn .pixel-icon:hover {
+  background-color: red;
+}

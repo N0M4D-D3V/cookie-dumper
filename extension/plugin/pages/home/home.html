@@ -1,0 +1,40 @@
+<header id="header">
+  <a class="undecorated" target="_blank" href="/docs/index.html">
+    <h1>CØØK13 DUMP3R</h1>
+  </a>
+  <div>
+    <button id="addCurrentBtn" title="Add current tab to watched domains">
+      <div class="pixel-icon bookmark"></div>
+    </button>
+    <button id="advanced-settings-btn">
+      <div class="pixel-icon forwardburger"></div>
+    </button>
+  </div>
+</header>
+<section>
+  <status-console></status-console>
+
+  <div class="view active" id="view-main">
+    <div class="row stacked">
+      <div class="row title-row">
+        <h2>Watched domains</h2>
+      </div>
+      <div>
+        <input
+          type="text"
+          id="domainInput"
+          placeholder="example.com"
+          autocomplete="off"
+        />
+        <button id="addDomainBtn">
+          <div class="pixel-icon heart"></div>
+        </button>
+      </div>
+      <ul id="domainsList"></ul>
+    </div>
+  </div>
+
+  <div class="view" id="view-editor">
+    <domain-editor></domain-editor>
+  </div>
+</section>

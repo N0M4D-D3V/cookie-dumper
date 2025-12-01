@@ -1,0 +1,73 @@
+:host {
+  display: block;
+  font-family: "Doto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--color-text, #111827);
+}
+.wrapper {
+  background: var(--bg-panel, rgba(255, 255, 255, 0.75));
+  border: 1px solid var(--panel-border, rgba(148, 163, 184, 0.7));
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--panel-shadow, 0 8px 18px rgba(15, 23, 42, 0.25));
+}
+header h2 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+}
+.hint {
+  margin: 0 0 12px 0;
+  color: var(--status-text, #4b5563);
+  font-size: 12px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-size: 12px;
+}
+.domain-input {
+  font-family: "Doto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--panel-border, rgba(148, 163, 184, 0.7));
+  background: var(--bg-body, #fff);
+  color: var(--color-text, #111827);
+}
+.domain-input:focus {
+  outline: none;
+  border-color: var(--button-border, rgba(59, 130, 246, 0.6));
+  box-shadow: 0 0 0 2px var(--button-hover-border, rgba(0, 255, 200, 0.7));
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+button {
+  font-family: inherit;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--button-border, rgba(59, 130, 246, 0.6));
+  background: var(--button-bg, transparent);
+  color: var(--button-text, #020617);
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.2s ease, color 0.2s ease;
+}
+button:hover {
+  transform: scale(1.01);
+  border-color: var(--button-hover-border, rgba(0, 255, 200, 0.7));
+  color: var(--button-hover-color, rgb(0, 255, 200));
+}
+.ghost {
+  border-style: dashed;
+}
+.primary {
+  border-color: var(--button-border, rgba(59, 130, 246, 0.6));
+}
+.status {
+  margin: 10px 0 0 0;
+  font-size: 12px;
+  color: var(--status-text, #4b5563);
+}

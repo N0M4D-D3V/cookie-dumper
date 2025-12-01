@@ -1,0 +1,8 @@
+.undecorated {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.t-center {
+  text-align: center;
+}

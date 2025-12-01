@@ -1,0 +1,31 @@
+:host {
+  font-family: "Doto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--color-text, #111827);
+}
+
+#return-btn,
+#save-endpoint-btn,
+#clear-endpoint-btn,
+#clear-mode-btn {
+  border: none;
+}
+
+.form-wrapper {
+  margin-bottom: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#clear-endpoint-btn,
+#clear-mode-btn {
+  --color-primary: red;
+}
+
+#dumpAll,
+#dumpTab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

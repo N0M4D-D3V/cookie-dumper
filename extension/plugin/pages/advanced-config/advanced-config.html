@@ -1,0 +1,67 @@
+<header id="header">
+  <a href="/docs/index.html" class="undecorated" target="_blank">
+    <h1>CØØK13 DUMP3R</h1>
+  </a>
+  <button id="return-btn">
+    <div class="pixel-icon backburger"></div>
+  </button>
+</header>
+<section>
+  <status-console></status-console>
+
+  <div
+    class="row"
+    style="margin-left: 5px; margin-bottom: 2rem"
+    title="Run background watchers. If a cookie changes, we will dump it."
+  >
+    <label class="toggle">
+      <input type="checkbox" id="autoModeToggle" />
+      <span class="toggle-box"></span>
+      <span class="toggle-text">AUTO-DUMP</span>
+    </label>
+  </div>
+
+  <!-- mode -->
+  <div class="form-wrapper">
+    <select id="mode-input">
+      <option disabled value="disabled">Select Mode</option>
+      <option value="file">File</option>
+      <option value="http">HTTP</option>
+      <option value="websoket" disabled>Websoket</option>
+    </select>
+    <div>
+      <button id="clear-mode-btn">
+        <div class="pixel-icon trash"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- endpoint -->
+  <div class="form-wrapper">
+    <input
+      id="endpoint-input"
+      type="text"
+      placeholder="Endpoint"
+      autocomplete="off"
+    />
+    <div>
+      <button id="save-endpoint-btn">
+        <div class="pixel-icon heart"></div>
+      </button>
+      <button id="clear-endpoint-btn">
+        <div class="pixel-icon trash"></div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <button id="dumpTab">
+    <div class="pixel-icon download"></div>
+    DUMP TAB
+  </button>
+  <button id="dumpAll">
+    <div class="pixel-icon forward"></div>
+    <span>DUMP ALL</span>
+  </button>
+</footer>

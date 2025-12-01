@@ -1,0 +1,88 @@
+@import "./theme/fonts.css";
+@import "./theme/variables.css";
+@import "./theme/animations.css";
+@import "./theme/pixel-icons.css";
+@import "./theme/utils.css";
+
+body {
+  font-family: "Doto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  min-width: 300px;
+
+  background: var(--bg-body);
+  color: var(--color-text);
+}
+
+select {
+  font-family: "Doto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--panel-border, rgba(148, 163, 184, 0.7));
+  background: var(--bg-panel, #fff);
+  color: var(--color-text, #111827);
+}
+
+p {
+  text-align: justify;
+}
+
+input {
+  font-family: "Doto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--panel-border, rgba(148, 163, 184, 0.7));
+  background: var(--bg-panel, #fff);
+  color: var(--color-text, #111827);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--button-border, rgba(59, 130, 246, 0.6));
+  box-shadow: 0 0 0 2px var(--button-hover-border, rgba(0, 255, 200, 0.7));
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+footer {
+  padding: 0 1rem 1rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 0.5rem;
+}
+
+section {
+  padding: 0 1rem 1rem 1rem;
+}
+
+hr {
+  border: 1px dashed var(--button-border);
+}
+
+button {
+  font-family: "Doto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  padding: 4px 8px;
+  cursor: pointer;
+  border: 1px dashed var(--button-border);
+  background: var(--button-bg);
+  color: var(--button-text);
+  border-radius: 15px;
+}
+
+button:hover {
+  border-color: var(--button-hover-border);
+  color: var(--button-hover-color);
+  transform: scale(1.01);
+}
+label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

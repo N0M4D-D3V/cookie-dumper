@@ -1,0 +1,84 @@
+:host {
+  display: block;
+  margin: 1rem 0 2rem 0;
+  font-family: "Doto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--shell-text-color, #c5d9ff);
+}
+.status {
+  padding: 8px 10px;
+  width: 100%;
+  height: 36px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+  background: var(
+    --shell-bg,
+    linear-gradient(135deg, rgba(59, 130, 246, 0.07), rgba(16, 185, 129, 0.08))
+  );
+  border: var(--shell-border, 1px solid rgba(59, 130, 246, 0.35));
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.status.visible {
+  opacity: 1;
+}
+.text {
+  display: inline-flex;
+  min-width: 0;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.text::after {
+  content: "";
+  width: 6px;
+  height: 1em;
+  background: var(--shell-caret, #22c55e);
+  border-radius: 2px;
+  display: inline-block;
+  margin-left: 4px;
+  animation: status-blink 1s steps(2, start) infinite;
+}
+.clear-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 6px;
+}
+.clear-btn:hover {
+  transform: scale(1.05);
+  color: red;
+}
+.flash {
+  animation: status-flash 0.35s 2;
+}
+@keyframes status-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes status-flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 1;
+  }
+}

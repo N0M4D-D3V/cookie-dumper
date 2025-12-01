@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "CØØK13 DUMP3R",
+  "author": "NØM4D",
+  "version": "1.0.1",
+  "description": "Save cookies from selected domains to a local file or send it using basic http.",
+  "permissions": ["cookies", "tabs", "downloads", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "icons": {
+    "128": "icons/icon.png"
+  },
+  "background": {
+    "service_worker": "plugin/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Cookie Dumper",
+    "default_popup": "plugin/app.html",
+    "default_icon": "icons/icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["plugin/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
